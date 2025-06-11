@@ -36,7 +36,32 @@
                 radial-gradient(at 10% 20%, rgba(37, 99, 235, 0.05) 0px, transparent 50%),
                 radial-gradient(at 90% 80%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
         }
-        
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+        }
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+        .check {
+            color: green;
+        }
+        .cross {
+            color: red;
+        }
+        .sebagian {
+            color: orange;
+        }
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
@@ -912,6 +937,47 @@
                 </div>
             </div>
         </div>
+
+          <h2>Perbandingan Fitur UMKM FinSync dan Startup Lain</h2>
+    
+    <table>
+        <tr>
+            <th>Fitur</th>
+            <th>Startup Lain</th>
+            <th>UMKM FinSync</th>
+        </tr>
+        <tr>
+            <td>Pencatatan transaksi otomatis</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+        </tr>
+        <tr>
+            <td>Laporan keuangan sederhana</td>
+            <td class="check">✓</td>
+            <td class="check">✓</td>
+        </tr>
+        <tr>
+            <td>Integrasi e-wallet & POS</td>
+            <td class="sebagian">Sebagian</td>
+            <td class="check">✓</td>
+        </tr>
+        <tr>
+            <td>Skoring kredit internal</td>
+            <td class="cross">✗ (jarang)</td>
+            <td class="cross">✗</td>
+        </tr>
+        <tr>
+            <td>Edukasi berbasis AI</td>
+            <td class="cross">✗ (belum ada)</td>
+            <td class="cross">✗</td>
+        </tr>
+        <tr>
+            <td>Fokus pada UMKM yang belum melek digital</td>
+            <td class="cross">✗</td>
+            <td class="check">✓</td>
+        </tr>
+    </table>
+
     </section>
     
     <!-- CTA Section -->
