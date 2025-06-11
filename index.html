@@ -343,6 +343,68 @@
                     transform: scale(1.05);
         }
         
+                /* Integration Section */
+        .integration {
+            background-color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .integration-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+            margin-top: 60px;
+        }
+        
+        .integration-text {
+            flex: 1;
+        }
+        
+        .integration-image {
+            flex: 1;
+            position: relative;
+            perspective: 1000px;
+        }
+        
+        .integration-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            transform-style: preserve-3d;
+            transition: transform 0.5s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .integration-card:before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(135deg, rgba(67,97,238,0.1) 0%, rgba(247,37,133,0.1) 100%);
+            transform: rotate(45deg);
+            z-index: 0;
+        }
+        
+        .integration-card:hover {
+            transform: rotateY(10deg) rotateX(5deg);
+        }
+        
+        .integration-card img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .integration-card:hover img {
+            transform: scale(1.05);
+        }
+        
         .integration-partners {
             display: flex;
             flex-wrap: wrap;
@@ -562,6 +624,101 @@
         }
 
                     color: var(--gray);
+            font-weight: 400;
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            background-color: #f8f9fa;
+            position: relative;
+        }
+        
+        .pricing-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 60px;
+            flex-wrap: wrap;
+        }
+        
+        .pricing-card {
+            background-color: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            width: 350px;
+            text-align: center;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .pricing-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transition: height 0.3s ease;
+            z-index: -1;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card:hover:before {
+            height: 100%;
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--primary);
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.05) translateY(-10px);
+        }
+        
+        .featured-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--secondary);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            transform: rotate(15deg);
+        }
+        
+        .price {
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: var(--dark);
+            position: relative;
+            display: inline-block;
+        }
+        
+        .price:before {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+        }
+        
+        .price span {
+            font-size: 1rem;
+            color: var(--gray);
             font-weight: 400;
         }
         
